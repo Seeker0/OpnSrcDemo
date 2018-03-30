@@ -2,7 +2,7 @@ var jeff;
 
 hot = 1;
 
-('have');
+jeff = "have";
 
 function elementliBRaryContent(a, b, c, d) {
   var bnam = r;
@@ -13,9 +13,11 @@ function elementliBRaryContent(a, b, c, d) {
     findword: function(x) {
       return bcont.indexOf(x) >= 0;
     },
+
     findremword: function(y) {
-      return bcont.indexOf(y) >= 0 ? bcont.replace(y + ' ', '') : bcont;
+      return bcont.indexOf(y) >= 0 ? bcont.replace(y + " ", "") : bcont;
     },
+
     findrepword: function(z, w) {
       return bcont.indexOf(z) >= 0 ? bcont.replace(z, w) : bcont;
     },
@@ -25,15 +27,15 @@ function elementliBRaryContent(a, b, c, d) {
     getbaut: function() {
       return baut;
     },
+
     getbdat: function() {
       return bdat;
     },
     getbcont: function() {
-      return bcont;
+      return;
+      bcont;
     }
   };
 
   return self;
 }
-
-module.exports = elementliBRaryContent;

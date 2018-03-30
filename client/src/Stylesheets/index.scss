@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: black;
+}
+
+#btn-holder {
+  display: flex;
+}
+
+.btn-space {
+  margin-left: auto;
+}
+
+.hidden {
+  display: none;
+}
