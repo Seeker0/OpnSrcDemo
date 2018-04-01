@@ -1,8 +1,14 @@
+// @mixin border-radius($radius) {
+//   -webkit-border-radius: $radius;
+//   -moz-border-radius: $radius;
+//   -o-border-radius: $radius;
+//   border-radius: $radius;
+// }
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: black;
 }
 
 #btn-holder {
@@ -16,3 +22,25 @@ body {
 .hidden {
   display: none;
 }
+
+// div {
+//   background-color: transparent !important;
+// }
+
+// section {
+//   height: 100px;
+//   width: 100px;
+//
+//   .class-one {
+//     height: 50px;
+//     width: 50px;
+//
+//     .button {
+//       color: #074e68;
+//     }
+//   }
+// }
+
+// .random {
+//   @include border-radius(3px);
+// }

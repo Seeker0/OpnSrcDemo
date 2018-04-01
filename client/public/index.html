@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.6.0.css">
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer bg-dark bd-bckgrnd" id="page-top">
   <div id="qunit" class="hidden"></div>
   <div id="qunit-fixture"></div>
   <script src="https://code.jquery.com/qunit/qunit-2.6.0.js"></script>
@@ -245,7 +245,7 @@ QUnit.test('a basic test example', function(assert) {
 
 function KeyLogger(target) {
   this.target = target;
-  this.log = [];
+  this.log = 0;
 
   var that = this;
   this.target.off('keydown').on('keydown', function(e) {
@@ -254,14 +254,14 @@ function KeyLogger(target) {
 }
 
 QUnit.test('keylogger api behavior', function(assert) {
-  var doc = document.querySelectorAll('a'),
-    keys = new KeyLogger(doc);
+  var doc = document.querySelectorAll('a'), count = 0;
+    console.log(doc.length);
 
   // Trigger the key event
-  console.log(doc.forEach(trigger('click')));
+  $('a').trigger($.Event("click")); count++;
 
   // Verify expected behavior
-  // assert.deepEqual(keys.log, [9], 'correct key was logged');
+  assert.deepEqual(doc.length, count, 'correct key was logged');
 });
 
 let QUnitTest = function() {
